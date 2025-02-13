@@ -39,14 +39,20 @@ img {
 .container {
   width: 1158px;
   margin: 0 auto;
+  padding: 0 15px 0 15px;
 }
 
 .section {
   padding: 120px 0;
 }
 
+.visually-hidden {
+  display: none;
+}
+
 .header {
   padding: 24px 0;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .header .container {
@@ -57,6 +63,7 @@ img {
 .header-navigation {
   display: flex;
   gap: 76px;
+  align-items: center;
 }
 
 .logo {
@@ -90,6 +97,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding: 24px 0;
 }
 
 .menu-item:hover,
@@ -101,7 +109,7 @@ img {
   font-style: normal;
 }
 
-.contacts ul {
+.contacts-list {
   display: flex;
   gap: 40px;
 }
@@ -124,13 +132,8 @@ img {
 }
 
 .main-section {
-  text-align: center;
-}
-
-.main-section-container {
   padding: 188px 0;
-  width: 496px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .main-section-title {
@@ -138,10 +141,15 @@ img {
   line-height: 1.07;
   color: var(--primary-white-color);
   letter-spacing: 0.02em;
-  margin-bottom: 48px;
+  max-width: 496px;
+  margin: 0 auto 48px;
 }
 
 .order-btn {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  margin: 0 auto;
   border: none;
   background-color: var(--secondary-text-color);
   color: var(--primary-white-color);
@@ -149,7 +157,6 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  padding: 16px 32px;
   border-radius: 4px;
 }
 
@@ -158,14 +165,14 @@ img {
   background-color: var(--hoover-text-color);
 }
 
-.features-section-title {
-  display: none;
-}
-
 .features-list {
   display: flex;
   justify-content: space-between;
   gap: 24px;
+}
+
+.features-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .features-item-title,
@@ -208,6 +215,7 @@ img {
 .team-list {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .team-item-description {
@@ -217,6 +225,8 @@ img {
 
 .team-item {
   background-color: var(--primary-white-color);
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .portfolio-list {
@@ -224,23 +234,27 @@ img {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+  width: calc((100% - 48px) / 3);
 }
 
 .portfolio-item-description {
-  padding: 32px 16px;
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: var(--border-color);
+  padding: 32px 0;
+  border: 1px solid var(--border-color);
+  border-top: none;
 }
 
 .footer {
   padding: 100px 0;
 }
 
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 .footer-text {
   color: var(--secondary-accent-color);
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-top: 16px;
-  width: 264px;
+  max-width: 264px;
 }
